@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undangan Edu Fair & Career Day 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HALAMAN UNDANGAN ================= -->
+<div id="viewUndangan">
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Edu Fair &amp; Career Day 2026</h1>
+      <p class="tema">Tema: “Terhubung untuk Masa Depan”. Tempat siswa bertemu kampus, perusahaan, dan alumni.</p>
+      <p class="meta">
+        <span>📅 Sabtu, 12 Desember 2026</span>
+        <span>🕘 08.00–15.00 WIB</span>
+        <span>📍 SMKN 6 TANGSEL</span>
+      </p>
+      <a class="btn" href="#rsvp">Konfirmasi kehadiran</a>
+    </div>
+    
+<div class="badge" aria-live="polite">
+    <p class="sapaan">
+        Kepada Yth. Bapak/Ibu/Saudara/i:
+    </p>
+    <div class="nama" id="namaTamu">
+        Tamu Undangan
+    </div>
+    <p class="instansi">
+        SMKN 6 Tangerang Selatan
+    </p>
+    <span class="kategori" id="kategoriTamu">
+        Tamu
+    </span>
+</div>
+  </div>
+</header>
+
+<main>
+<section><div class="wrap">
+  <h2>Lokasi acara</h2>
+   <iframe class="map" title="Peta lokasi acara" loading="lazy"
+  src="https://maps.google.com/maps?q=SMKN%206%20Tangerang%20Selatan&output=embed"></iframe>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Rundown acara</h2>
+  <ol class="timeline">
+    <li><time>08.00</time><br>Registrasi dan penyambutan tamu</li>
+    <li><time>09.00</time><br>Pembukaan dan sambutan kepala sekolah</li>
+    <li><time>09.30</time><br>Talkshow: Memilih jalur kuliah dan karier</li>
+    <li><time>11.00</time><br>Kunjungan booth kampus dan perusahaan</li>
+    <li><time>12.00</time><br>Ishoma</li>
+    <li><time>13.00</time><br>Career talk bersama alumni</li>
+    <li><time>14.30</time><br>Penutupan dan foto bersama</li>
+  </ol>
+</div></section>
+
+<section id="rsvp" style="padding-top:0"><div class="wrap">
+  <h2>Konfirmasi kehadiran (RSVP)</h2>
+  <form id="rsvpForm" class="card" novalidate>
+    <label for="rsvpNama">Nama / instansi</label>
+    <input id="rsvpNama" required>
+    <label for="rsvpStatus">Kehadiran</label>
+    <select id="rsvpStatus"><option>Hadir</option><option>Tidak hadir</option></select>
+    <label for="rsvpJumlah">Jumlah orang yang hadir</label>
+    <input id="rsvpJumlah" type="number" min="1" max="10" value="1">
+    <label for="rsvpCatatan">Catatan (opsional)</label>
+    <textarea id="rsvpCatatan" rows="3"></textarea>
+    <p><button class="btn wa" type="submit">Kirim konfirmasi via WhatsApp</button></p>
+    <p id="rsvpOk" class="ok hidden" role="status"></p>
+  </form>
+</div></section>
+</main>
+<footer>Panitia Edu Fair &amp; Career Day 2026 · <a href="#admin">Admin</a></footer>
+</div>
+
+<div id="viewAdmin" class="hidden">
+<main class="wrap" style="padding-top:32px;padding-bottom:48px">
+  <h1>Admin: Blast Undangan WhatsApp</h1>
+  <p class="note">Pilih file <code>data-tamu.csv</code>. Data dibaca di browser Anda dan tidak diunggah ke mana pun. <a href="#">Kembali ke undangan</a></p>
+
+  <div class="toolbar">
+    <div><label for="csvFile">File CSV</label><input type="file" id="csvFile" accept=".csv,text/csv"></div>
+    <div><label for="baseUrl">Alamat halaman undangan</label><input id="baseUrl"></div>
+  </div>
+
+  <label for="template">Template pesan</label>
+  <textarea id="template" rows="7"></textarea>
+  <p class="note">Kode yang bisa dipakai: {nama}, {instansi}, {kategori}, {link}</p>
+
+  <div id="error" class="err hidden" role="alert"></div>
+  <p id="info" class="note"></p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>ID</th><th>Nama tamu</th><th>Instansi</th><th>Kategori</th><th>No. WhatsApp</th><th>Aksi</th></tr></thead>
+      <tbody id="tbody"><tr><td colspan="6" class="note">Belum ada data. Pilih file CSV terlebih dahulu.</td></tr></tbody>
+    </table>
+  </div>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
